@@ -79,7 +79,7 @@ public class HashTable {
 
 			for (int n = 0; n < votersArray.length; n++) {
 
-			Voter newElementVal = votersArray[n];
+			Voter newElementVal = votersArray[n];dsds
 
 			
 
@@ -88,7 +88,7 @@ public class HashTable {
 			int arrayIndex = Integer.parseInt(newElementVal.getId()) % 70;
 
 			// System.out.println("Index = " + arrayIndex + " for "
-			// 		+ newElementVal.getName());
+			// 		+ newElementVal.getName());dsds
 
 			
 
