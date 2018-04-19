@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+import java.math.BigInteger;
 /*
 
 @author Dacod Magagula
@@ -79,16 +79,20 @@ public class HashTable {
 
 			for (int n = 0; n < votersArray.length; n++) {
 
-			Voter newElementVal = votersArray[n];dsds
+			Voter newElementVal = votersArray[n];
 
 			
+           BigInteger idNumber =  new BigInteger(newElementVal.getId());
+           BigInteger mod = new BigInteger("70");
 
 
 
-			int arrayIndex = Integer.parseInt(newElementVal.getId()) % 70;
+			//int arrayIndex = Integer.parseInt(newElementVal.getId()) % 70;
 
-			// System.out.println("Index = " + arrayIndex + " for "
-			// 		+ newElementVal.getName());dsds
+           int arrayIndex = idNumber.mod(mod).intValue();
+
+			System.out.println("Index = " + arrayIndex + " for "
+			 		+ newElementVal.getName());
 
 			
 
@@ -97,6 +101,7 @@ public class HashTable {
 				++arrayIndex;
 
 				//Collission try next index
+				System.out.println("Collision Try " + arrayIndex + " Instead");
 
 				
 
@@ -127,10 +132,15 @@ public class HashTable {
 
 
 		try{
+         
 
+         BigInteger idNumber =  new BigInteger(id);
+         BigInteger mod = new BigInteger("70");
 
 			
-		int arrayIndexHash = Integer.parseInt(id) % 70;
+		//int arrayIndexHash = Integer.parseInt(id) % 70;
+
+         int arrayIndexHash = idNumber.mod(mod).intValue();
 
       
 
@@ -167,6 +177,8 @@ public class HashTable {
 
 			System.out.println("There is no registered voter with the ID number "+id);
 
+		}catch(NumberFormatException e){
+			System.out.println("Number Format Exception");
 		}
 		
 
