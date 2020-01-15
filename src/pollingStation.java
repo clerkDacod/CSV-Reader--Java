@@ -1,3 +1,8 @@
+/*
+@author Dacod Magagula email@dacod.co.za
+
+*/
+
 import java.util.Scanner;
 
 public class pollingStation{

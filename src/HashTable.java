@@ -81,8 +81,11 @@ public class HashTable {
 
 			Voter newElementVal = votersArray[n];
 
+
+
+        
 			
-           BigInteger idNumber =  new BigInteger(newElementVal.getId());
+           BigInteger idNumber =  new BigInteger(newElementVal.getId().trim());
            BigInteger mod = new BigInteger("70");
 
 
@@ -92,7 +95,7 @@ public class HashTable {
            int arrayIndex = idNumber.mod(mod).intValue();
 
 			System.out.println("Index = " + arrayIndex + " for "
-			 		+ newElementVal.getName());
+			 		+ newElementVal.getName()+ "ID number "+newElementVal.getId());
 
 			
 
@@ -134,21 +137,24 @@ public class HashTable {
 		try{
          
 
-         BigInteger idNumber =  new BigInteger(id);
+         BigInteger idNumber =  new BigInteger(id.trim());
          BigInteger mod = new BigInteger("70");
+
+         
 
 			
 		//int arrayIndexHash = Integer.parseInt(id) % 70;
 
          int arrayIndexHash = idNumber.mod(mod).intValue();
-
-      
-
+         System.out.println(arrayIndexHash);
+        
         
 
 
 
 		while (theArray[arrayIndexHash].getId() != null) {
+
+			System.out.println("Executed!");
 
 			
 
@@ -178,7 +184,7 @@ public class HashTable {
 			System.out.println("There is no registered voter with the ID number "+id);
 
 		}catch(NumberFormatException e){
-			System.out.println("Number Format Exception");
+			System.out.println("Please enter a number.");
 		}
 		
 

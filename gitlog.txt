@@ -1,0 +1,18 @@
+0: commit 9fd37d67aee733f4b65082b4075a07ec78494bb0
+1: Author: Dacod Magagula <dacodmagagula@Dacods-MacBook-Air.local>
+2: Date: Thu Apr 19 06:28:31 2018 +0200
+3:
+4: Bit integer not working properly but getting there
+5:
+6: commit b2d850552683a556d284c56d0c5dc9d39649019e
+7: Author: Dacod Magagula <dacodmagagula@Dacods-MacBook-Air.local>
+8: Date: Wed Apr 18 12:43:02 2018 +0200
+9:
+...
+10: Testing bit int
+11:
+12: commit 18fb7d806e590169f8941e24bfcd04cac2c7668b
+13: Author: Dacod Magagula <dacodmagagula@Dacods-MacBook-Air.local>
+14: Date: Wed Apr 18 12:42:30 2018 +0200
+15:
+16: Initial git commit
